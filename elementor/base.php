@@ -110,7 +110,7 @@ abstract class Custom_Widget_Base extends Widget_Base {
 
 		ob_start();
 		include $file;
-		echo ob_get_clean();
+		echo ob_get_clean(); //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 	public function get_all_posts($post_type) {
         global $post;
