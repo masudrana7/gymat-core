@@ -6,6 +6,7 @@
  */
 
 namespace radiustheme\Gymat_Core;
+if ( ! defined( 'ABSPATH' ) ) exit;
 extract($data);
 
 $fb_attr 		= '';

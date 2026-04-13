@@ -96,10 +96,10 @@ Class GymatTheme_Class_Widget extends WP_Widget {
                                     $trainer_name= get_the_title( $schedule_info['trainer'] );
                                 }
                                 if ( GymatTheme::$options['class_time_format'] == '24' ) {
-                                    $start_time = $start_time ? date( "H:i", $start_time ) : '';
+                                    $start_time = $start_time ? gmdate( "H:i", $start_time ) : '';
                                 }
                                 else {
-                                    $start_time = $start_time ? date( "g:i a", $start_time ) : '';
+                                    $start_time = $start_time ? gmdate( "g:i a", $start_time ) : '';
                                 }
                                 ?>
                                 <li>

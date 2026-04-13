@@ -5,6 +5,7 @@
  * @version 1.0
  */
 namespace radiustheme\Gymat_Core;
+if ( ! defined( 'ABSPATH' ) ) exit;
 use Elementor\Utils;
 use Elementor\Group_Control_Image_Size;
 extract($data);

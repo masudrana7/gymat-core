@@ -6,6 +6,7 @@
  */
 
 namespace radiustheme\Gymat_Core;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 if($data['slider_autoplay']=='yes'){
 	$data['slider_autoplay']=true;

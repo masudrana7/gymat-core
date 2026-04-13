@@ -25,7 +25,7 @@ class Woo_Product_Category extends Custom_Widget_Base {
 	public function rt_fields(){
 		
 		/*For woo category*/
-		$woo_categories = get_terms( 'product_cat', 'orderby=count&hide_empty=0' );
+		$woo_categories = get_terms( array( 'taxonomy' => 'product_cat', 'orderby' => 'count', 'hide_empty' => false ) );
 		
 		$woo_category_dropdown = array( '0' => esc_html__( 'Select Categories', 'gymat-core' ) );
 

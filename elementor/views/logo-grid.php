@@ -6,6 +6,7 @@
  */
 
 namespace radiustheme\Gymat_Core;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 
 $lg_item=$data['col_lg'];

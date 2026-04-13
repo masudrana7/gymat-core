@@ -6,6 +6,7 @@
  */
 
 namespace radiustheme\Gymat_Core;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 use GymatTheme;
 use GymatTheme_Helper;

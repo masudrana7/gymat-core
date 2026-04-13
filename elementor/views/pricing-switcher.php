@@ -1,5 +1,6 @@
 <?php 
 namespace radiustheme\Gymat_Core;
+if ( ! defined( 'ABSPATH' ) ) exit;
 use Elementor\Utils;
 extract($data);
 

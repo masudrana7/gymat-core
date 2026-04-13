@@ -13,7 +13,7 @@ if( !function_exists( 'gymat_reading_time' )){
 	function gymat_reading_time(){
 		$post_content = get_post()->post_content;
 		$post_content = strip_shortcodes( $post_content );
-		$post_content = strip_tags( $post_content );
+		$post_content = wp_strip_all_tags( $post_content );
 		$word_count   = str_word_count( $post_content );
 		$reading_time = floor( $word_count / 200 );
 

@@ -6,6 +6,7 @@
  */
 
 namespace radiustheme\Gymat_Core;
+if ( ! defined( 'ABSPATH' ) ) exit;
 extract($data);
 
 $final_icon_class       = " fas fa-thumbs-up";

@@ -6,6 +6,7 @@
  */
 
 namespace radiustheme\Gymat_Core;
+if ( ! defined( 'ABSPATH' ) ) exit;
 use GymatTheme_Helper;
 use Elementor\Group_Control_Image_Size;
 
