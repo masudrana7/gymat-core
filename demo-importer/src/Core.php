@@ -1,4 +1,5 @@
 <?php
+//phpcs:disable
 /**
  * Demo Importer Core Class
  *

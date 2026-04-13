@@ -4,6 +4,10 @@ Plugin Name: Gymat Core
 Plugin URI: https://www.radiustheme.com
 Description: Gymat Core Plugin for Gymat Theme
 Version: 1.9.1
+Tested up to: 6.9
+Requires PHP: 7.4
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Author: RadiusTheme
 Author URI: https://www.radiustheme.com
 */
@@ -31,7 +35,6 @@ class Gymat_Core {
 		$prefix = GYMAT_CORE_THEME_PREFIX_VAR;
 
 //		add_action( 'plugins_loaded', array( $this, 'demo_importer' ), 15 );
-		add_action( 'init', array( $this, 'load_textdomain' ), 16 );
 		add_action( 'after_setup_theme', array( $this, 'post_meta' ), 15 );
 		add_action( 'after_setup_theme', array( $this, 'elementor_widgets' ) );
 		add_action( $this->action,       array( $this, 'after_theme_loaded' ) );
@@ -73,9 +76,7 @@ class Gymat_Core {
 	public function demo_importer() {
 		require_once 'demo-importer.php';
 	}
-	public function load_textdomain() {
-		load_plugin_textdomain( $this->plugin , false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-	}
+    
 	public function post_meta(){
 		if ( !did_action( $this->action ) || ! defined( 'RT_FRAMEWORK_VERSION' ) ) {
 			return;
