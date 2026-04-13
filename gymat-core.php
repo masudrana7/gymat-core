@@ -123,12 +123,12 @@ class Gymat_Core {
 		?>
 		<?php if((GymatTheme::$options['single_class_ar_info']) && (!empty($gymat_class_price) || !empty($gymat_class_unit) || !empty($gymat_class_duration) || !empty($gymat_class_intensity))){ ?>
 			<div class="class-info-wrap widget">
-				<h3 class="info-title"><?php _e('Course Info','gymat-core'); ?></h3>
+				<h3 class="info-title"><?php esc_html_e('Course Info','gymat-core'); ?></h3>
 				<ul class="class-info-list">
 					<?php if(!empty($gymat_class_price) || !empty($gymat_class_unit)){ ?>
 						<li>
 							<h4><?php if($gymat_class_price):?>
-								<?php _e('Course Price:','gymat-core').':'; ?>
+								<?php esc_html_e('Course Price:','gymat-core').':'; ?>
 								<span class="price"><?php echo esc_html($gymat_class_price); ?></span>
 							<?php endif; ?>
 							<?php if($gymat_class_unit):?>
@@ -137,12 +137,12 @@ class Gymat_Core {
 						</li>
 					<?php } ?>
 					<?php if(!empty($gymat_class_duration)){ ?>	
-					<li><h4><?php _e('Course Duration:','gymat-core').':'; ?><span class="item"><?php echo esc_html($gymat_class_duration); ?></span></h4></li>
+					<li><h4><?php esc_html_e('Course Duration:','gymat-core').':'; ?><span class="item"><?php echo esc_html($gymat_class_duration); ?></span></h4></li>
 					<?php } ?>
 					<?php if(!empty($gymat_class_intensity)){ ?>			
-					<li><h4><?php _e('Class Intensity:','gymat-core').':'; ?><span class="item"><?php echo esc_html($gymat_class_intensity); ?></span></h4></li>
+					<li><h4><?php esc_html_e('Class Intensity:','gymat-core').':'; ?><span class="item"><?php echo esc_html($gymat_class_intensity); ?></span></h4></li>
 					<?php } ?>	
-					<li><h4><?php _e('Class Name:','gymat-core').':'; ?><span class="item"><?php the_title(); ?></span></h4></li>		
+					<li><h4><?php esc_html_e('Class Name:','gymat-core').':'; ?><span class="item"><?php the_title(); ?></span></h4></li>		
 				</ul>
 				<?php if(GymatTheme::$options['single_class_ar_button']){ ?>
 					<div class="single-class-button">

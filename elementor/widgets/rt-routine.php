@@ -46,7 +46,7 @@ class RT_Routine extends Custom_Widget_Base {
             $start_tag         = '<div class="'.$class.'">';
             $end_tag           = '</div>';
             ?>
-            <?php echo $start_tag;?>
+            <?php echo wp_kses( $start_tag, array( 'div' => array( 'class' => true ) ) );?>
             <?php if($trainer_id || $trainer_permalink || $trainer_position ){ 
                 if ( $trainer == 'yes' ): ?>
                 <div class="trainer-thumb">
@@ -70,8 +70,8 @@ class RT_Routine extends Custom_Widget_Base {
                     <span>- <?php echo esc_html( $each_routine['end_time'] );?></span>
                 <?php endif;?>
             </div>
-            <h4 class="rt-item-title"><a href="<?php echo esc_url($permalink); ?>" <?php echo $style; ?>><?php echo esc_html( $each_routine['class'] );?></a></h4>
-            <?php echo $end_tag;?>
+            <h4 class="rt-item-title"><a href="<?php echo esc_url($permalink); ?>"<?php if ( $each_routine['color'] ) { echo ' style="color:' . esc_attr( $each_routine['color'] ) . ';"'; } ?>><?php echo esc_html( $each_routine['class'] );?></a></h4>
+            <?php echo '</div>';?>
         <?php endforeach; ?>
         <?php
     }
@@ -93,7 +93,7 @@ class RT_Routine extends Custom_Widget_Base {
                 $end_tag   = '</div>';
             }
             ?>
-            <?php echo $start_tag;?>
+            <?php echo wp_kses( $start_tag, array( 'div' => array( 'class' => true, 'style' => true ), 'a' => array( 'href' => true, 'class' => true, 'style' => true ) ) );?>
             <div class="rt-item-title"><?php echo esc_html( $each_routine['class'] );?></div>
             <div class="rt-item-time">
                 <span><?php echo esc_html( $each_routine['start_time'] );?></span>
@@ -104,7 +104,7 @@ class RT_Routine extends Custom_Widget_Base {
             <?php if ( $trainer == 'yes' ): ?>
                 <div class="rt-item-trainer"><?php echo esc_html( $each_routine['trainer'] );?></div>
             <?php endif;?>
-            <?php echo $end_tag;?>
+            <?php echo wp_kses( $end_tag, array( 'div' => array(), 'a' => array() ) );?>
         <?php endforeach; ?>
         <?php
     }
