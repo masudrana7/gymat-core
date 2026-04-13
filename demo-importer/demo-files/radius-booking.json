@@ -1,0 +1,1050 @@
+{
+  "metadata": {
+    "plugin": "radius-booking",
+    "version": "1.0.7",
+    "exported_at": "2026-04-12T17:15:43+06:00",
+    "site_url": "https://radiustheme.com/demo/wordpress/themes/gymat",
+    "modules": [
+      "settings",
+      "category",
+      "location",
+      "service",
+      "staff",
+      "customer",
+      "appointment"
+    ],
+    "counts": {
+      "settings": 34,
+      "category": 6,
+      "location": 0,
+      "service": 6,
+      "staff": 2,
+      "customer": 1,
+      "appointment": 1
+    }
+  },
+  "data": {
+    "settings": {
+      "exported_at": "2026-04-12 17:15:44",
+      "plugin_version": "1.0.7",
+      "settings": {
+        "auth": {
+          "useWordPressUsers": true,
+          "allowCustomerRegistration": true,
+          "requirePasswordOnRegister": true,
+          "removeLoginRegisterTabs": false,
+          "hideCreateAccountPrompt": false,
+          "mandatoryEmail": true
+        },
+        "bookingBuffer": {
+          "useServiceDuration": true,
+          "includeBufferTime": true
+        },
+        "business": {
+          "logoUrl": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/04/gymat_light-1.svg",
+          "companyName": "Gymat",
+          "phone": "",
+          "address": "178 West 27th Street, Suite 527, New York NY 10012 United States"
+        },
+        "chatbot": {
+          "enabled": false,
+          "showFormToggle": false,
+          "provider": "openai",
+          "apiKey": "",
+          "geminiApiKey": "",
+          "model": "gpt-4o-mini",
+          "geminiModel": "gemini-3-flash-preview",
+          "maxTokens": 1024,
+          "temperature": 0.7,
+          "displayMode": "all_pages",
+          "specificPages": [],
+          "welcomeMessage": "Hi! I'm your booking assistant. How can I help you today?",
+          "botName": "Booking Assistant",
+          "primaryColor": "#0040ff",
+          "position": "bottom-right",
+          "responseStyle": "text",
+          "bubbleIcon": "chat",
+          "bubbleImage": ""
+        },
+        "currency": {
+          "symbol": "USD",
+          "symbolPosition": "before",
+          "thousand": ",",
+          "decimal": ".",
+          "decimals": 2,
+          "hideBreakdownIfZero": true
+        },
+        "customSchedules": [],
+        "dateTime": {
+          "timeSystem": "12h",
+          "dateFormat": "m/d/Y",
+          "selectableInterval": 30,
+          "showAppointmentEndTime": true,
+          "verboseDates": false,
+          "numericMonth": true
+        },
+        "display": {
+          "frontendItemsPerPage": 10,
+          "backendItemsPerPage": 20,
+          "defaultBackendPage": "appointments",
+          "showClientTimezone": true,
+          "showAddToCalendar": true
+        },
+        "email_admin_new_appointment": [],
+        "email_customer_appointment_cancelled": [],
+        "email_customer_appointment_completed": [],
+        "email_customer_appointment_confirmed": [],
+        "email_customer_appointment_pending": [],
+        "email_customer_appointment_reminder": [],
+        "email_employee_appointment_cancelled": [],
+        "email_employee_appointment_confirmed": [],
+        "email_employee_appointment_pending": [],
+        "email_employee_appointment_reminder": [],
+        "email": {
+          "senderName": "gymate",
+          "senderEmail": "techlabpro24@gmail.com",
+          "replyToEmail": ""
+        },
+        "formCustomization": {
+          "design": {
+            "primaryColor": "#000",
+            "secondaryColor": "#E2E8F0",
+            "backgroundColor": "#FFFFFF",
+            "textColor": "#323E5B",
+            "sidebarColor": "",
+            "stepButtonColor": "#ff0336",
+            "stepButtonHoverColor": "#062576",
+            "borderColor": "#DAE0E5",
+            "fontFamily": "Inter, ui-sans-serif, system-ui",
+            "borderRadius": "0.75rem",
+            "sidebarImageUrl": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/liftingmachine.png"
+          },
+          "labels": {
+            "services": {
+              "heading": "Easily book your appointments & Get the Service you deserve.",
+              "serviceLabel": "Which Service you want to take",
+              "locationLabel": "Location",
+              "staffLabel": "Choose a Trainers",
+              "servicePlaceholder": "Select service",
+              "locationPlaceholder": "Select location",
+              "staffPlaceholder": "Select Trainers"
+            },
+            "datetime": {
+              "heading": "Date & Time Selection",
+              "subheading": "Select your appointment date and time",
+              "loadingText": "Loading available dates...",
+              "noAvailableText": "No available dates found"
+            },
+            "timeslot": {
+              "heading": "Available Time Slots",
+              "subheading": "Select your appointment date and time",
+              "loadingText": "Loading time slots...",
+              "noSlotsText": "No available time slots for the selected date.",
+              "bringingAnyoneLabel": "Bringing Anyone?",
+              "bringingAnyoneSubLabel": "Add extra people to your booking"
+            },
+            "details": {
+              "heading": "Customer Details",
+              "subheading": "Customer Information",
+              "fullNameLabel": "Full Name",
+              "fullNamePlaceholder": "Enter name here ...",
+              "phoneLabel": "Phone number",
+              "emailLabel": "E-mail",
+              "emailPlaceholder": "Enter e-mail...",
+              "noteLabel": "Note",
+              "notePlaceholder": "Add any additional notes..."
+            },
+            "payment": {
+              "heading": "Payment",
+              "subheading": "Payment Summary",
+              "summaryTitle": "Appointment summary"
+            },
+            "checkout": {
+              "heading": "Checkout",
+              "subheading": "Make your payment",
+              "paymentMethodTitle": "Payment method"
+            },
+            "confirmation": {
+              "heading": "Appointment Confirmed",
+              "subheading": "We Look Forward To Seeing You.",
+              "detailsTitle": "Appointment Details"
+            },
+            "sidebar": {
+              "summaryTitle": "Summary:",
+              "customerTitle": "Customer:",
+              "helpTitle": "Questions?",
+              "helpText": "Call %s for help"
+            }
+          },
+          "buttons": {
+            "nextText": "Next",
+            "backText": "Back",
+            "confirmText": "Continue",
+            "processingText": "Processing…"
+          },
+          "toggles": {
+            "showNoteField": true,
+            "showSidebar": true,
+            "showSidebarImage": true,
+            "showCalendarExport": true,
+            "allowBackNavigation": true
+          }
+        },
+        "holidays": [],
+        "integrations": {
+          "googleMapApiKey": "",
+          "ipLocateApiKey": "",
+          "redirectUrl": "",
+          "attachmentPath": "/wp-content/uploads/bookings",
+          "googleCalendar": {
+            "enabled": false,
+            "clientId": "",
+            "clientSecret": "",
+            "redirectUri": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-admin/admin.php?page=radius-booking",
+            "twoWaySync": false,
+            "syncOnCreate": true,
+            "syncOnUpdate": true,
+            "syncOnDelete": true,
+            "blockTimeSlots": false,
+            "calendarId": "primary",
+            "eventColor": "9",
+            "auth_url": "https://accounts.google.com/o/oauth2/v2/auth?response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.events&access_type=offline&prompt=consent&state=3a68bdf676",
+            "oauth_nonce": "3a68bdf676"
+          }
+        },
+        "languages": [
+          "English",
+          "Assamese"
+        ],
+        "logic": {
+          "exclusiveLocation": true,
+          "singleLocationPerAgent": true
+        },
+        "pages": {
+          "bookingFormPage": 7184,
+          "myBookingPage": 7185
+        },
+        "payment": {
+          "paypal": {
+            "enabled": false,
+            "testMode": true,
+            "liveClientId": "",
+            "liveSecretKey": "",
+            "testClientId": "",
+            "testSecretKey": ""
+          },
+          "offline": {
+            "enabled": true,
+            "label": "Pay at venue",
+            "instructions": "Please bring payment to your appointment. We accept cash, check, and credit cards."
+          }
+        },
+        "permissions": {
+          "multiServiceSameTimeslot": false
+        },
+        "phone": {
+          "showAllCountries": true,
+          "defaultCountry": "US",
+          "mandatory": false,
+          "validateIfRequired": true,
+          "rejectInvalidIfRequired": true,
+          "formatOnInput": false,
+          "showDialCode": true
+        },
+        "restrictions": {
+          "earliest": "+1 hour",
+          "latest": "+6 months",
+          "minCancelTime": "+24 hours",
+          "minRescheduleTime": "+12 hours",
+          "maxFutureBookingsPerCustomer": 0
+        },
+        "security": {
+          "enableRecaptcha": false,
+          "invisibleRecaptcha": true,
+          "recaptchaSiteKey": "",
+          "recaptchaSecretKey": ""
+        },
+        "serviceList": {
+          "layout": "grid",
+          "columns": 3,
+          "perPage": 9,
+          "showImage": true,
+          "showPrice": true,
+          "showDuration": true,
+          "showCategory": true,
+          "showDescription": true,
+          "showCategoryFilter": true,
+          "showStaff": true,
+          "buttonText": "Book Now",
+          "primaryColor": "#0040ff",
+          "cardRadius": "0.75rem"
+        },
+        "staffPermissions": {
+          "canEditService": false,
+          "canCreateService": false,
+          "canDeleteService": false,
+          "canManageStaff": false,
+          "canEditWorkSchedule": false
+        },
+        "statuses": {
+          "default": "confirmed",
+          "hiddenOnCalendar": [
+            "canceled"
+          ]
+        },
+        "weeklySchedule": {
+          "monday": {
+            "enabled": true,
+            "start": "09:00",
+            "end": "17:00"
+          },
+          "tuesday": {
+            "enabled": true,
+            "start": "09:00",
+            "end": "17:00"
+          },
+          "wednesday": {
+            "enabled": true,
+            "start": "09:00",
+            "end": "17:00"
+          },
+          "thursday": {
+            "enabled": true,
+            "start": "09:00",
+            "end": "17:00"
+          },
+          "friday": {
+            "enabled": true,
+            "start": "09:00",
+            "end": "17:00"
+          },
+          "saturday": {
+            "enabled": true,
+            "start": "09:00",
+            "end": "17:00"
+          },
+          "sunday": {
+            "enabled": true,
+            "start": "09:00",
+            "end": "17:00"
+          }
+        }
+      }
+    },
+    "category": [
+      {
+        "id": "1",
+        "name": "Fitness Training",
+        "status": "active",
+        "order_number": null,
+        "image_id": "0",
+        "translations": null,
+        "created_at": "2026-03-29 13:55:20",
+        "updated_at": "2026-03-29 13:55:20"
+      },
+      {
+        "id": "2",
+        "name": "Yoga & Meditation",
+        "status": "active",
+        "order_number": null,
+        "image_id": "0",
+        "translations": null,
+        "created_at": "2026-03-29 13:56:38",
+        "updated_at": "2026-03-29 13:56:38"
+      },
+      {
+        "id": "3",
+        "name": "Cardio Training",
+        "status": "active",
+        "order_number": null,
+        "image_id": "0",
+        "translations": null,
+        "created_at": "2026-03-29 13:58:18",
+        "updated_at": "2026-03-29 13:58:18"
+      },
+      {
+        "id": "4",
+        "name": "Weightlifting",
+        "status": "active",
+        "order_number": null,
+        "image_id": "0",
+        "translations": null,
+        "created_at": "2026-03-29 13:59:30",
+        "updated_at": "2026-03-29 13:59:30"
+      },
+      {
+        "id": "5",
+        "name": "Group Fitness",
+        "status": "active",
+        "order_number": null,
+        "image_id": "0",
+        "translations": null,
+        "created_at": "2026-03-29 14:00:41",
+        "updated_at": "2026-03-29 14:00:41"
+      },
+      {
+        "id": "6",
+        "name": "Dance & Cardio",
+        "status": "active",
+        "order_number": null,
+        "image_id": "0",
+        "translations": null,
+        "created_at": "2026-03-29 14:48:04",
+        "updated_at": "2026-03-29 14:48:04"
+      }
+    ],
+    "location": [],
+    "service": [
+      {
+        "id": "1",
+        "name": "Personal Training Session",
+        "description": "One-on-one personal training session designed to help you achieve strength, endurance, and flexibility goals with a tailored workout plan and professional guidance from certified trainers.",
+        "color": "",
+        "price": 46,
+        "status": "visible",
+        "category_id": 1,
+        "min_capacity": 1,
+        "max_capacity": 1,
+        "duration": 3600,
+        "time_before": 0,
+        "time_after": 0,
+        "bringing_anyone": false,
+        "priority": "least_occupied",
+        "picture_full_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-3.jpg",
+        "picture_thumb_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-3-150x150.jpg",
+        "position": 0,
+        "is_visible": true,
+        "aggregated_price": true,
+        "settings": {
+          "general": {
+            "defaultStatus": "confirmed",
+            "minBookingTime": "disabled",
+            "minCancelTime": "disabled",
+            "minRescheduleTime": "disabled",
+            "bookingAdvancePeriod": 365,
+            "redirectUrl": ""
+          },
+          "paymentMethods": {
+            "stripe": false,
+            "paypal": false,
+            "offline": true
+          },
+          "integrations": {
+            "googleCalender": false,
+            "googleMeet": false,
+            "zoom": false
+          }
+        },
+        "recurring_cycle": "disabled",
+        "recurring_sub": "future",
+        "recurring_payment": 0,
+        "deposit_payment": false,
+        "deposit_type": "fixed",
+        "deposit_per_person": false,
+        "deposit": 0,
+        "full_payment": false,
+        "mandatory_extra": false,
+        "min_selected_extras": 0,
+        "custom_pricing": "",
+        "max_extra_people": 0,
+        "limit_per_customer": {
+          "enabled": false,
+          "appointmentNumber": 1,
+          "timeFrame": "day",
+          "timePeriod": 1,
+          "from": "bookingDate"
+        },
+        "translations": null,
+        "listing_id": 0,
+        "source_type": "manual",
+        "created_at": "2026-03-29 13:56:15",
+        "updated_at": "2026-03-29 13:56:15"
+      },
+      {
+        "id": "2",
+        "name": "Yoga Wellness Class",
+        "description": "Group yoga session focusing on flexibility, balance, and mindfulness. Suitable for all levels to relieve stress, improve posture, and enhance overall physical and mental wellbeing.\nBooking Title: Cardio Blast Workout",
+        "color": "",
+        "price": 85,
+        "status": "visible",
+        "category_id": 2,
+        "min_capacity": 1,
+        "max_capacity": 1,
+        "duration": 3600,
+        "time_before": 0,
+        "time_after": 0,
+        "bringing_anyone": false,
+        "priority": "least_occupied",
+        "picture_full_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-7.jpg",
+        "picture_thumb_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-7-150x150.jpg",
+        "position": 0,
+        "is_visible": true,
+        "aggregated_price": true,
+        "settings": {
+          "general": {
+            "defaultStatus": "confirmed",
+            "minBookingTime": "disabled",
+            "minCancelTime": "disabled",
+            "minRescheduleTime": "disabled",
+            "bookingAdvancePeriod": 365,
+            "redirectUrl": ""
+          },
+          "paymentMethods": {
+            "stripe": false,
+            "paypal": false,
+            "offline": true
+          },
+          "integrations": {
+            "googleCalender": false,
+            "googleMeet": false,
+            "zoom": false
+          }
+        },
+        "recurring_cycle": "disabled",
+        "recurring_sub": "future",
+        "recurring_payment": 0,
+        "deposit_payment": false,
+        "deposit_type": "fixed",
+        "deposit_per_person": false,
+        "deposit": 0,
+        "full_payment": false,
+        "mandatory_extra": false,
+        "min_selected_extras": 0,
+        "custom_pricing": "",
+        "max_extra_people": 0,
+        "limit_per_customer": {
+          "enabled": false,
+          "appointmentNumber": 1,
+          "timeFrame": "day",
+          "timePeriod": 1,
+          "from": "bookingDate"
+        },
+        "translations": null,
+        "listing_id": 0,
+        "source_type": "manual",
+        "created_at": "2026-03-29 13:57:54",
+        "updated_at": "2026-03-29 13:57:54"
+      },
+      {
+        "id": "3",
+        "name": "Cardio Blast Workout",
+        "description": "High-energy cardio class designed to boost heart health, burn calories, and improve stamina. Perfect for anyone looking to increase fitness and achieve weight loss goals safely.\nBooking Title: Strength Training Program",
+        "color": "",
+        "price": 39.99,
+        "status": "visible",
+        "category_id": 3,
+        "min_capacity": 1,
+        "max_capacity": 1,
+        "duration": 3600,
+        "time_before": 0,
+        "time_after": 0,
+        "bringing_anyone": false,
+        "priority": "least_occupied",
+        "picture_full_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-2.jpg",
+        "picture_thumb_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-2-150x150.jpg",
+        "position": 0,
+        "is_visible": true,
+        "aggregated_price": true,
+        "settings": {
+          "general": {
+            "defaultStatus": "confirmed",
+            "minBookingTime": "disabled",
+            "minCancelTime": "disabled",
+            "minRescheduleTime": "disabled",
+            "bookingAdvancePeriod": 365,
+            "redirectUrl": ""
+          },
+          "paymentMethods": {
+            "stripe": false,
+            "paypal": false,
+            "offline": true
+          },
+          "integrations": {
+            "googleCalender": false,
+            "googleMeet": false,
+            "zoom": false
+          }
+        },
+        "recurring_cycle": "disabled",
+        "recurring_sub": "future",
+        "recurring_payment": 0,
+        "deposit_payment": false,
+        "deposit_type": "fixed",
+        "deposit_per_person": false,
+        "deposit": 0,
+        "full_payment": false,
+        "mandatory_extra": false,
+        "min_selected_extras": 0,
+        "custom_pricing": "",
+        "max_extra_people": 0,
+        "limit_per_customer": {
+          "enabled": false,
+          "appointmentNumber": 1,
+          "timeFrame": "day",
+          "timePeriod": 1,
+          "from": "bookingDate"
+        },
+        "translations": null,
+        "listing_id": 0,
+        "source_type": "manual",
+        "created_at": "2026-03-29 13:59:01",
+        "updated_at": "2026-03-29 13:59:01"
+      },
+      {
+        "id": "4",
+        "name": "Strength Training Program",
+        "description": "Targeted strength training sessions to build muscle, improve posture, and enhance physical performance. Includes customized exercises and guidance for safe lifting techniques.",
+        "color": "",
+        "price": 55,
+        "status": "visible",
+        "category_id": 4,
+        "min_capacity": 1,
+        "max_capacity": 1,
+        "duration": 3600,
+        "time_before": 0,
+        "time_after": 0,
+        "bringing_anyone": false,
+        "priority": "least_occupied",
+        "picture_full_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-1.jpg",
+        "picture_thumb_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-1-150x150.jpg",
+        "position": 0,
+        "is_visible": true,
+        "aggregated_price": true,
+        "settings": {
+          "general": {
+            "defaultStatus": "confirmed",
+            "minBookingTime": "disabled",
+            "minCancelTime": "disabled",
+            "minRescheduleTime": "disabled",
+            "bookingAdvancePeriod": 365,
+            "redirectUrl": ""
+          },
+          "paymentMethods": {
+            "stripe": false,
+            "paypal": false,
+            "offline": true
+          },
+          "integrations": {
+            "googleCalender": false,
+            "googleMeet": false,
+            "zoom": false
+          }
+        },
+        "recurring_cycle": "disabled",
+        "recurring_sub": "future",
+        "recurring_payment": 0,
+        "deposit_payment": false,
+        "deposit_type": "fixed",
+        "deposit_per_person": false,
+        "deposit": 0,
+        "full_payment": false,
+        "mandatory_extra": false,
+        "min_selected_extras": 0,
+        "custom_pricing": "",
+        "max_extra_people": 0,
+        "limit_per_customer": {
+          "enabled": false,
+          "appointmentNumber": 1,
+          "timeFrame": "day",
+          "timePeriod": 1,
+          "from": "bookingDate"
+        },
+        "translations": null,
+        "listing_id": 0,
+        "source_type": "manual",
+        "created_at": "2026-03-29 14:00:10",
+        "updated_at": "2026-03-29 14:00:10"
+      },
+      {
+        "id": "5",
+        "name": "Spin Cycling Class",
+        "description": "High-intensity indoor cycling class to improve cardiovascular endurance, burn calories, and tone lower body muscles. Led by experienced instructors for maximum results.",
+        "color": "",
+        "price": 85,
+        "status": "visible",
+        "category_id": 5,
+        "min_capacity": 1,
+        "max_capacity": 1,
+        "duration": 3600,
+        "time_before": 0,
+        "time_after": 0,
+        "bringing_anyone": false,
+        "priority": "least_occupied",
+        "picture_full_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog11.jpg",
+        "picture_thumb_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog11-150x150.jpg",
+        "position": 0,
+        "is_visible": true,
+        "aggregated_price": true,
+        "settings": {
+          "general": {
+            "defaultStatus": "confirmed",
+            "minBookingTime": "disabled",
+            "minCancelTime": "disabled",
+            "minRescheduleTime": "disabled",
+            "bookingAdvancePeriod": 365,
+            "redirectUrl": ""
+          },
+          "paymentMethods": {
+            "stripe": false,
+            "paypal": false,
+            "offline": true
+          },
+          "integrations": {
+            "googleCalender": false,
+            "googleMeet": false,
+            "zoom": false
+          }
+        },
+        "recurring_cycle": "disabled",
+        "recurring_sub": "future",
+        "recurring_payment": 0,
+        "deposit_payment": false,
+        "deposit_type": "fixed",
+        "deposit_per_person": false,
+        "deposit": 0,
+        "full_payment": false,
+        "mandatory_extra": false,
+        "min_selected_extras": 0,
+        "custom_pricing": "",
+        "max_extra_people": 0,
+        "limit_per_customer": {
+          "enabled": false,
+          "appointmentNumber": 1,
+          "timeFrame": "day",
+          "timePeriod": 1,
+          "from": "bookingDate"
+        },
+        "translations": null,
+        "listing_id": 0,
+        "source_type": "manual",
+        "created_at": "2026-03-29 14:01:21",
+        "updated_at": "2026-03-29 14:01:21"
+      },
+      {
+        "id": "6",
+        "name": "Zumba Dance Fitness",
+        "description": "Fun, high-energy Zumba class combining dance and aerobic exercise to burn calories, improve endurance, and boost mood. Suitable for all fitness levels.",
+        "color": "",
+        "price": 75,
+        "status": "visible",
+        "category_id": 6,
+        "min_capacity": 1,
+        "max_capacity": 1,
+        "duration": 1800,
+        "time_before": 0,
+        "time_after": 0,
+        "bringing_anyone": false,
+        "priority": "least_occupied",
+        "picture_full_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-13.jpg",
+        "picture_thumb_path": "https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/03/blog-13-150x150.jpg",
+        "position": 0,
+        "is_visible": true,
+        "aggregated_price": true,
+        "settings": {
+          "general": {
+            "defaultStatus": "confirmed",
+            "minBookingTime": "disabled",
+            "minCancelTime": "disabled",
+            "minRescheduleTime": "disabled",
+            "bookingAdvancePeriod": 365,
+            "redirectUrl": ""
+          },
+          "paymentMethods": {
+            "stripe": false,
+            "paypal": false,
+            "offline": true
+          },
+          "integrations": {
+            "googleCalender": false,
+            "googleMeet": false,
+            "zoom": false
+          }
+        },
+        "recurring_cycle": "disabled",
+        "recurring_sub": "future",
+        "recurring_payment": 0,
+        "deposit_payment": false,
+        "deposit_type": "fixed",
+        "deposit_per_person": false,
+        "deposit": 0,
+        "full_payment": false,
+        "mandatory_extra": false,
+        "min_selected_extras": 0,
+        "custom_pricing": "",
+        "max_extra_people": 0,
+        "limit_per_customer": {
+          "enabled": false,
+          "appointmentNumber": 1,
+          "timeFrame": "day",
+          "timePeriod": 1,
+          "from": "bookingDate"
+        },
+        "translations": null,
+        "listing_id": 0,
+        "source_type": "manual",
+        "created_at": "2026-03-29 14:48:56",
+        "updated_at": "2026-03-29 14:48:56"
+      }
+    ],
+    "staff": [
+      {
+        "id": "1",
+        "user_type": "employee",
+        "email": "techlabpro24@gmail.com",
+        "status": "active",
+        "created_by": null,
+        "created_at": "2026-03-29 13:53:46",
+        "updated_at": "2026-03-29 13:53:46",
+        "profile": {
+          "user_id": "1",
+          "wp_user_id": "1",
+          "first_name": "Admin",
+          "last_name": "",
+          "phone": null,
+          "image_id": null,
+          "gender": "",
+          "time_zone": null,
+          "note": null,
+          "badge_id": null,
+          "location_id": null,
+          "translations": null,
+          "created_at": "2026-03-29 13:53:46",
+          "updated_at": "2026-03-29 13:53:46"
+        },
+        "services": [],
+        "days_off": [],
+        "weekdays": [],
+        "special_days": []
+      },
+      {
+        "id": "2",
+        "user_type": "employee",
+        "email": "support@radiustheme.com",
+        "status": "active",
+        "created_by": null,
+        "created_at": "2026-03-29 13:54:52",
+        "updated_at": "2026-03-29 13:54:52",
+        "profile": {
+          "user_id": "2",
+          "wp_user_id": null,
+          "first_name": "Stefi ",
+          "last_name": "Cohen",
+          "phone": null,
+          "image_id": null,
+          "gender": "",
+          "time_zone": null,
+          "note": null,
+          "badge_id": null,
+          "location_id": null,
+          "translations": null,
+          "created_at": "2026-03-29 13:54:52",
+          "updated_at": "2026-03-29 13:54:52"
+        },
+        "services": [
+          {
+            "user_id": "2",
+            "service_id": "1",
+            "price": 46,
+            "min_capacity": 1,
+            "max_capacity": 1,
+            "custom_pricing": {
+              "enabled": false,
+              "durations": [
+                {
+                  "duration": "1800",
+                  "price": 0
+                }
+              ]
+            },
+            "created_at": "2026-03-29 13:56:15",
+            "updated_at": "2026-03-29 13:56:15"
+          },
+          {
+            "user_id": "2",
+            "service_id": "2",
+            "price": 85,
+            "min_capacity": 1,
+            "max_capacity": 1,
+            "custom_pricing": {
+              "enabled": false,
+              "durations": [
+                {
+                  "duration": "1800",
+                  "price": 0
+                }
+              ]
+            },
+            "created_at": "2026-03-29 13:57:54",
+            "updated_at": "2026-03-29 13:57:54"
+          },
+          {
+            "user_id": "2",
+            "service_id": "3",
+            "price": 39.99,
+            "min_capacity": 1,
+            "max_capacity": 1,
+            "custom_pricing": {
+              "enabled": false,
+              "durations": [
+                {
+                  "duration": "1800",
+                  "price": 0
+                }
+              ]
+            },
+            "created_at": "2026-03-29 13:59:01",
+            "updated_at": "2026-03-29 13:59:01"
+          },
+          {
+            "user_id": "2",
+            "service_id": "4",
+            "price": 55,
+            "min_capacity": 1,
+            "max_capacity": 1,
+            "custom_pricing": {
+              "enabled": false,
+              "durations": [
+                {
+                  "duration": "1800",
+                  "price": 0
+                }
+              ]
+            },
+            "created_at": "2026-03-29 14:00:10",
+            "updated_at": "2026-03-29 14:00:10"
+          },
+          {
+            "user_id": "2",
+            "service_id": "5",
+            "price": 85,
+            "min_capacity": 1,
+            "max_capacity": 1,
+            "custom_pricing": {
+              "enabled": false,
+              "durations": [
+                {
+                  "duration": "1800",
+                  "price": 0
+                }
+              ]
+            },
+            "created_at": "2026-03-29 14:01:21",
+            "updated_at": "2026-03-29 14:01:21"
+          },
+          {
+            "user_id": "2",
+            "service_id": "6",
+            "price": 75,
+            "min_capacity": 1,
+            "max_capacity": 1,
+            "custom_pricing": {
+              "enabled": false,
+              "durations": [
+                {
+                  "duration": "1800",
+                  "price": 0
+                }
+              ]
+            },
+            "created_at": "2026-03-29 14:48:56",
+            "updated_at": "2026-03-29 14:48:56"
+          }
+        ],
+        "days_off": [],
+        "weekdays": [],
+        "special_days": []
+      }
+    ],
+    "customer": [
+      {
+        "id": "3",
+        "user_type": "customer",
+        "email": "techlabpro19@gmail.com",
+        "status": "active",
+        "created_by": null,
+        "created_at": "2026-03-29 15:04:56",
+        "updated_at": "2026-03-29 15:04:56",
+        "profile": {
+          "user_id": "3",
+          "wp_user_id": "2",
+          "first_name": "tr",
+          "last_name": "asdf",
+          "phone": null,
+          "image_id": null,
+          "gender": "",
+          "time_zone": null,
+          "note": null,
+          "badge_id": null,
+          "location_id": null,
+          "translations": null,
+          "created_at": "2026-03-29 15:04:56",
+          "updated_at": "2026-03-29 09:04:56"
+        }
+      }
+    ],
+    "appointment": [
+      {
+        "id": "1",
+        "employee_id": 2,
+        "service_id": 2,
+        "appointment_date": "2026-03-31",
+        "start_time": "16:00:00",
+        "end_time": "17:00:00",
+        "status": "confirmed",
+        "location_id": null,
+        "notify_customer": "1",
+        "notes": "t",
+        "cancellation_reason": null,
+        "parent_id": null,
+        "created_at": "2026-03-29 15:04:56",
+        "updated_at": "2026-03-29 15:04:56",
+        "deleted_at": null,
+        "bookings": [
+          {
+            "appointment_id": "1",
+            "customer_id": "3",
+            "status": "confirmed",
+            "price": "85",
+            "persons": "0",
+            "coupon_id": null,
+            "token": "WYU8vZZ2mG",
+            "customer_info": {
+              "first_name": "tr",
+              "last_name": "asdf",
+              "email": "techlabpro19@gmail.com"
+            },
+            "custom_info": [],
+            "utc_offset": "0",
+            "duration": "3600",
+            "created_at": "2026-03-29 15:04:56",
+            "updated_at": "2026-03-29 15:04:56",
+            "payment": {
+              "booking_id": "1",
+              "customer_id": "3",
+              "transaction_id": "",
+              "payment_method": "offline",
+              "amount": "0",
+              "total_amount": "85",
+              "due_amount": "85",
+              "status": "pending",
+              "booking_date_time": "2026-03-31 16:00:00",
+              "parent_id": null,
+              "booking_type": "service",
+              "invoice_id": null,
+              "paid_at": null,
+              "cancelled_at": null,
+              "coupon_id": null,
+              "coupon_code": null,
+              "discount_amount": "0",
+              "tax_rate": "0",
+              "tax_amount": "0",
+              "created_at": "2026-03-29 15:04:56",
+              "updated_at": "2026-03-29 15:04:56"
+            }
+          }
+        ],
+        "integrations": []
+      }
+    ]
+  }
+}
