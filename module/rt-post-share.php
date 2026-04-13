@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 function gymat_post_share() {
 
 	if( get_post_type() != 'page' ) { 

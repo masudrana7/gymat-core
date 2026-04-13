@@ -4,6 +4,7 @@
  * @since   1.0
  * @version 1.0
  */
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 add_action( 'widgets_init', 'gymat_widgets_init' );
 function gymat_widgets_init() {

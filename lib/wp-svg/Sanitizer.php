@@ -1,6 +1,7 @@
 <?php
 
 namespace enshrined\svgSanitize;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 use DOMDocument;
 use enshrined\svgSanitize\data\AllowedAttributes;
