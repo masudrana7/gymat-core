@@ -79,16 +79,16 @@ $temp = GymatTheme_Helper::wp_set_temp_query( $query );
                                 $end_time = !empty( $time['end_time'] ) ? strtotime( $time['end_time'] ) : false;
 
                                 if ( GymatTheme::$options['class_time_format'] == '24' ) {
-                                    $start_time = $start_time ? date( "H:i", $start_time ) : '';
+                                    $start_time = $start_time ? gmdate( "H:i", $start_time ) : '';
                                 }
                                 else {
-                                    $start_time = $start_time ? date( "g:ia", $start_time ) : '';
+                                    $start_time = $start_time ? gmdate( "g:ia", $start_time ) : '';
                                 }
                                 if ( GymatTheme::$options['class_time_format'] == '24' ) {
-                                    $end_time = $end_time ? date( "H:i", $end_time ) : '';
+                                    $end_time = $end_time ? gmdate( "H:i", $end_time ) : '';
                                 }
                                 else {
-                                    $end_time = $end_time ? date( "g:ia", $end_time ) : '';
+                                    $end_time = $end_time ? gmdate( "g:ia", $end_time ) : '';
                                 }
                                 $full_time     = $start_time."-".$end_time;
                                 ?>

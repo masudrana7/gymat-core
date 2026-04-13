@@ -125,10 +125,10 @@ $col_class = "col-lg-{$data['col_lg']} col-md-{$data['col_md']} col-sm-{$data['c
                                         $start_time = !empty( $time['start_time'] ) ? strtotime( $time['start_time'] ) : false;
 
                                         if ( GymatTheme::$options['class_time_format'] == '24' ) {
-                                            $start_time = $start_time ? date( "H:i", $start_time ) : '';
+                                            $start_time = $start_time ? gmdate( "H:i", $start_time ) : '';
                                         }
                                         else {
-                                            $start_time = $start_time ? date( "g:i a", $start_time ) : '';
+                                            $start_time = $start_time ? gmdate( "g:i a", $start_time ) : '';
                                         }
                                         ?>
                                         <li>

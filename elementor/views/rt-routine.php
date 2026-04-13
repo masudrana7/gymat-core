@@ -58,12 +58,12 @@ foreach ( $classes as $class ) {
         $end_time   = !empty( $meta['end_time'] ) ? strtotime( $meta['end_time'] ) : false;
 
         if ( GymatTheme::$options['class_time_format'] == '24' ) {
-            $start_time = date( "H:i", $start_time );
-            $end_time   = $end_time ? date( "H:i", $end_time ) : '';
+            $start_time = gmdate( "H:i", $start_time );
+            $end_time   = $end_time ? gmdate( "H:i", $end_time ) : '';
         }
         else {
-            $start_time = date( "g:ia", $start_time );
-            $end_time   = $end_time ? date( "g:ia", $end_time ) : '';
+            $start_time = gmdate( "g:ia", $start_time );
+            $end_time   = $end_time ? gmdate( "g:ia", $end_time ) : '';
         }
 
         if ( !in_array( $meta['week'], $available_weeks ) ) {

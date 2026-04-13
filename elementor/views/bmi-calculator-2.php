@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-$uniqid = (int) rand();
+$uniqid = (int) wp_rand();
 
 $metric_checked = $imperial_checked = $metric_style = $imperial_style = '';
 if ( $data['unit_default'] == 'imperial' ) {

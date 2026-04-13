@@ -44,7 +44,7 @@ if(!empty($data['postid'])){
 }
 
 $classes = get_posts( $args );
-$uniqid = (int) rand();
+$uniqid = (int) wp_rand();
 
 $class_schedules = array();
 
@@ -67,12 +67,12 @@ foreach ( $classes as $key => $class ) {
         $end_time   = !empty( $meta['end_time'] ) ? strtotime( $meta['end_time'] ) : false;
 
         if ( GymatTheme::$options['class_time_format'] == '24' ) {
-            $start_time = $start_time ? date( "H:i", $start_time ) : '';
-            $end_time   = $end_time ? date( "H:i", $end_time ) : '';
+            $start_time = $start_time ? gmdate( "H:i", $start_time ) : '';
+            $end_time   = $end_time ? gmdate( "H:i", $end_time ) : '';
         }
         else {
-            $start_time = $start_time ? date( "g:ia", $start_time ) : '';
-            $end_time   = $end_time ? date( "g:ia", $end_time ) : '';
+            $start_time = $start_time ? gmdate( "g:ia", $start_time ) : '';
+            $end_time   = $end_time ? gmdate( "g:ia", $end_time ) : '';
         }
 
         $class_schedules[$class->ID][] = array(

@@ -73,12 +73,12 @@ class RT_Upcomming_Class extends Custom_Widget_Base {
                 $end_time   = !empty( $meta['end_time'] ) ? strtotime( $meta['end_time'] ) : false;
 
                 if ( GymatTheme::$options['class_time_format'] == '24' ) {
-                    $start_time = date( "H:i", $start_time );
-                    $end_time   = $end_time ? date( "H:i", $end_time ) : '';
+                    $start_time = gmdate( "H:i", $start_time );
+                    $end_time   = $end_time ? gmdate( "H:i", $end_time ) : '';
                 }
                 else {
-                    $start_time = date( "g:ia", $start_time );
-                    $end_time   = $end_time ? date( "g:ia", $end_time ) : '';
+                    $start_time = gmdate( "g:ia", $start_time );
+                    $end_time   = $end_time ? gmdate( "g:ia", $end_time ) : '';
                 }
 				$gymat_trainer_name='';
                 if(!empty( $meta['trainer'] ) && get_post_status( $meta['trainer'] )){

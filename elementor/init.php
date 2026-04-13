@@ -85,11 +85,11 @@ class Custom_Widget_Init {
 		
 		foreach ( $widgets as $widget => $class ) {
 			$template_name = "/elementor-custom/widgets/{$widget}.php";
-			if ( file_exists( STYLESHEETPATH . $template_name ) ) {
-				$file = STYLESHEETPATH . $template_name;
+			if ( file_exists( get_stylesheet_directory() . $template_name ) ) {
+				$file = get_stylesheet_directory() . $template_name;
 			}
-			elseif ( file_exists( TEMPLATEPATH . $template_name ) ) {
-				$file = TEMPLATEPATH . $template_name;
+			elseif ( file_exists( get_template_directory() . $template_name ) ) {
+				$file = get_template_directory() . $template_name;
 			}
 			else {
 				$file = __DIR__ . '/widgets/' . $widget. '.php';

@@ -66,7 +66,7 @@ class RT_Class extends Custom_Widget_Base {
 				$timestamp = $meta['week'] . ' ' . $meta['start_time'];
 				$timestamp = strtotime($timestamp);
 				$meta_week_timestamp=strtotime($meta['week']);
-				$current_week = date('D');
+				$current_week = gmdate('D');
 				$current_week_timestamp = strtotime($current_week);
 				if($meta_week_timestamp==$current_week_timestamp){
 					continue;
@@ -75,14 +75,14 @@ class RT_Class extends Custom_Widget_Base {
 				$end_time   = !empty( $meta['end_time'] ) ? strtotime( $meta['end_time'] ) : false;
 
 				if ( GymatTheme::$options['class_time_format'] == '24' ) {
-					$start_time = date( "H:i", $start_time );
-					$end_time   = $end_time ? date( "H:i", $end_time ) : '';
+					$start_time = gmdate( "H:i", $start_time );
+					$end_time   = $end_time ? gmdate( "H:i", $end_time ) : '';
 				}
 				else {
-					$start_time = date( "g:i a", $start_time );
-					$end_time   = $end_time ? date( "g:i a", $end_time ) : '';
+					$start_time = gmdate( "g:i a", $start_time );
+					$end_time   = $end_time ? gmdate( "g:i a", $end_time ) : '';
 				}
-				$today=date("D");
+				$today=gmdate("D");
 				$next_2_days_timestamp = strtotime("+3 day",strtotime($today));
 				if($timestamp <= $next_2_days_timestamp){
 					$schedule[] = array(
@@ -138,14 +138,14 @@ class RT_Class extends Custom_Widget_Base {
 				$start_time = strtotime( $meta['start_time'] );
 				$end_time   = !empty( $meta['end_time'] ) ? strtotime( $meta['end_time'] ) : false;
 				if ( GymatTheme::$options['class_time_format'] == '24' ) {
-					$start_time = date( "H:i", $start_time );
-					$end_time   = $end_time ? date( "H:i", $end_time ) : '';
+					$start_time = gmdate( "H:i", $start_time );
+					$end_time   = $end_time ? gmdate( "H:i", $end_time ) : '';
 				}
 				else {
-					$start_time = date( "g:i a", $start_time );
-					$end_time   = $end_time ? date( "g:i a", $end_time ) : '';
+					$start_time = gmdate( "g:i a", $start_time );
+					$end_time   = $end_time ? gmdate( "g:i a", $end_time ) : '';
 				}
-				$today=strtolower(date('D'));
+				$today=strtolower(gmdate('D'));
 				if($meta['week']==$today){
 					$schedule[] = array(
 						'class'         => $class->post_title,
