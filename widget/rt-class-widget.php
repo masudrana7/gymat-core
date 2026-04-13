@@ -54,7 +54,7 @@ Class GymatTheme_Class_Widget extends WP_Widget {
 		?>
 		<?php echo wp_kses_post($args['before_widget']); ?>
 		<?php if ( $title ) {
-			echo wp_kses_post($args['before_title']) . $title . wp_kses_post($args['after_title']);
+			echo wp_kses_post($args['before_title']) . esc_html( $title ) . wp_kses_post($args['after_title']);
 		} ?>
 		<div class="class-schedule-widget">
 		<?php while ( $result_query->have_posts() ) {

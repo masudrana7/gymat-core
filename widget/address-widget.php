@@ -18,7 +18,8 @@ class GymatTheme_Address_Widget extends WP_Widget {
 		echo wp_kses_post( $args['before_widget'] );
 		if ( !empty( $instance['title'] ) ) {
 			$html = apply_filters( 'widget_title', $instance['title'] );
-			echo $html = $args['before_title'] . $html .$args['after_title'];
+			$html = $args['before_title'] . $html . $args['after_title'];
+		echo wp_kses_post( $html );
 		}
 		else {
 			$html = '';

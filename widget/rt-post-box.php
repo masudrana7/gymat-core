@@ -64,7 +64,7 @@ Class GymatTheme_Post_Box extends WP_Widget {
 		?>
 		<?php echo wp_kses_post($args['before_widget']); ?>
 		<?php if ( $title ) {
-			echo wp_kses_post($args['before_title']) . $title . wp_kses_post($args['after_title']);
+			echo wp_kses_post($args['before_title']) . esc_html( $title ) . wp_kses_post($args['after_title']);
 		} ?>
 		<div class="post-box-style <?php if ( $select_style == 'box-style-2' ) { ?>row<?php } ?>">
 		<?php while ( $result_query->have_posts() ) : $result_query->the_post(); ?>
@@ -91,7 +91,7 @@ Class GymatTheme_Post_Box extends WP_Widget {
 						<div class="post-box-date">
 							<ul>
 								<?php if ( $show_date ) { ?>
-								<li><i class="fas fa-calendar-alt"></i><?php echo get_the_time( get_option( 'date_format' ) ); ?></li>
+								<li><i class="fas fa-calendar-alt"></i><?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?></li>
 								<?php } if ( $show_cat ) { ?>
 								<li><?php
 									$i = 1;
@@ -132,7 +132,7 @@ Class GymatTheme_Post_Box extends WP_Widget {
 					<div class="post-box-date">
 						<ul>
 							<?php if ( $show_date ) { ?>
-							<li><i class="fas fa-calendar-alt"></i><?php echo get_the_time( get_option( 'date_format' ) ); ?></li>
+							<li><i class="fas fa-calendar-alt"></i><?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?></li>
 							<?php } if ( $show_cat ) { ?>
 							<li><?php
 								$i = 1;

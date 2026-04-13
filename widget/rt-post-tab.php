@@ -27,7 +27,7 @@ Class GymatTheme_Post_Tab extends WP_Widget {
 
 		echo wp_kses_post( $args['before_widget'] );
 		if ( $title ) {
-			echo wp_kses_post( $args['before_title'] ) . $title . wp_kses_post( $args['after_title'] );
+			echo wp_kses_post( $args['before_title'] ) . esc_html( $title ) . wp_kses_post( $args['after_title'] );
 		}
 		?>
 		<div class="post-tab-layout">
@@ -65,7 +65,7 @@ Class GymatTheme_Post_Tab extends WP_Widget {
 								<h3 class="entry-title">
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								</h3>
-								<div class="post-date"><i class="fas fa-calendar-alt"></i><?php echo get_the_time( get_option( 'date_format' ) ); ?></div>
+								<div class="post-date"><i class="fas fa-calendar-alt"></i><?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?></div>
 							</div>
 						</div>
 					</div>
@@ -100,7 +100,7 @@ Class GymatTheme_Post_Tab extends WP_Widget {
 								<h3 class="entry-title">
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								</h3>
-								<div class="post-date"><i class="fas fa-calendar-alt"></i><?php echo get_the_time( get_option( 'date_format' ) ); ?></div>
+								<div class="post-date"><i class="fas fa-calendar-alt"></i><?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?></div>
 							</div>
 						</div>
 					</div>
@@ -133,7 +133,7 @@ Class GymatTheme_Post_Tab extends WP_Widget {
 								<h3 class="entry-title">
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								</h3>
-								<div class="post-date"><i class="fas fa-calendar-alt"></i><?php echo get_the_time( get_option( 'date_format' ) ); ?></div>
+								<div class="post-date"><i class="fas fa-calendar-alt"></i><?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?></div>
 							</div>
 						</div>
 					</div>

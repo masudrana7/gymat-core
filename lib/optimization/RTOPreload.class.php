@@ -20,7 +20,7 @@ class RTOPreload{
         else return;
 
         foreach ($urls as $url) {
-            echo "<link rel='preload' href='{$url}' as='font' type='font/woff2' crossorigin />";
+            printf( "<link rel='preload' href='%s' as='font' type='font/woff2' crossorigin />", esc_url( $url ) );
         }
 
 
@@ -35,7 +35,7 @@ class RTOPreload{
         else return;
 
         foreach ($urls as $url) {
-            echo "<link rel='preconnect' href='{$url}' />";
+            printf( "<link rel='preconnect' href='%s' />", esc_url( $url ) );
         }
 
     }

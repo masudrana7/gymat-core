@@ -18,13 +18,14 @@ class GymatTheme_Advertisement extends WP_Widget {
 		echo wp_kses_post( $args['before_widget'] );
 		if ( !empty( $instance['title'] ) ) {
 			$html = apply_filters( 'widget_title', $instance['title'] );
-			echo $html = $args['before_title'] . $html .$args['after_title'];
+			$html = $args['before_title'] . $html . $args['after_title'];
+		echo wp_kses_post( $html );
 		}
 		else {
 			$html = '';
 		}
 		?>
-		<div class="advertisement-widget" style="background-image: url(<?php echo wp_get_attachment_image_url($instance['bg_image'],'full') ; ?>)">
+		<div class="advertisement-widget" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $instance['bg_image'], 'full' ) ); ?>)">
 		    <div class="ad-widget-wrap">
 				<?php
 					if( !empty( $instance['ad_title'] ) ){ ?>
