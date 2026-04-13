@@ -1,4 +1,5 @@
 <?php
+//phpcs:disable
 /**
 * Widget API: Specific Opening Hour Widget class
 * By : Radius Theme

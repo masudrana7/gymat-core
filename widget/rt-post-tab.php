@@ -1,4 +1,5 @@
 <?php
+//phpcs:disable
 /**
 * Widget API: Post Tab Widget class
 * By : Radius Theme

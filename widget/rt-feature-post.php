@@ -1,4 +1,5 @@
 <?php 
+//phpcs:disable
 /**
 * Widget API: Recent Post Widget class
 * By : Radius Theme

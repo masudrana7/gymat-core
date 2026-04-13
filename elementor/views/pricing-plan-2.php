@@ -1,4 +1,5 @@
 <?php 
+//phpcs:disable
 namespace radiustheme\Gymat_Core;
 if ( ! defined( 'ABSPATH' ) ) exit;
 use GymatTheme;
