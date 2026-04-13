@@ -10,10 +10,10 @@ $uniqid = (int) rand();
 $metric_checked = $imperial_checked = $metric_style = $imperial_style = '';
 if ( $data['unit_default'] == 'imperial' ) {
     $imperial_checked = ' checked';
-    $metric_style = ' style="display:none;"';
+    $metric_style = 'display:none;';
 } else {
     $metric_checked = ' checked';
-    $imperial_style = ' style="display:none;"';
+    $imperial_style = 'display:none;';
 }
 
 $metric_radio_html = '<input class="form-check-input" id="rt-bmi-metric-' . $uniqid . '" type="radio" name="rt-bmi-unit" value="metric"' . $metric_checked . '><label for="rt-bmi-metric-' . $uniqid . '">' . __( 'Metric Units', 'gymat-core' ) . '</label>';
@@ -43,31 +43,31 @@ $bmi_chart_encoded = json_encode( $bmi_chart );
         <div class="col-lg-5">
             <form class="rt-bmi-form wow fadeInUp" data-wow-delay="600ms" data-wow-duration="800ms">
                 <div class="rt-bmi-radio"<?php echo ( $data['unit_display'] != 'yes' ) ? ' style="display:none;"':'';?>>
-                    <?php echo $radio_html; ?>
+                    <?php echo wp_kses( $radio_html, array( 'input' => array( 'class' => true, 'id' => true, 'type' => true, 'name' => true, 'value' => true, 'checked' => true ), 'label' => array( 'for' => true ) ) ); ?>
                 </div>
                 <div class="rt-bmi-fields">
-                    <div class="input-form rt-bmi-fields-metric" <?php echo $metric_style; ?>>
-                        <input type="text" class=" form-control" name="rt-bmi-weight" placeholder="<?php _e( 'Weight / kg', 'gymat-core' ); ?>">
+                    <div class="input-form rt-bmi-fields-metric" style="<?php echo esc_attr( $metric_style ); ?>">
+                        <input type="text" class=" form-control" name="rt-bmi-weight" placeholder="<?php esc_attr_e( 'Weight / kg', 'gymat-core' ); ?>">
                     </div>
-                    <div class="input-form rt-bmi-fields-metric" <?php echo $metric_style; ?>>
-                       <input type="text" class=" form-control" name="rt-bmi-height" placeholder="<?php _e( 'Height / cm', 'gymat-core' ); ?>">
+                    <div class="input-form rt-bmi-fields-metric" style="<?php echo esc_attr( $metric_style ); ?>">
+                       <input type="text" class=" form-control" name="rt-bmi-height" placeholder="<?php esc_attr_e( 'Height / cm', 'gymat-core' ); ?>">
                     </div>
-                    <div class="input-form rt-bmi-fields-imperial" <?php echo $imperial_style; ?>>
-                        <input type="text" class=" form-control" name="rt-bmi-pound" placeholder="<?php _e( 'Weight / lbs', 'gymat-core' ); ?>">
+                    <div class="input-form rt-bmi-fields-imperial" style="<?php echo esc_attr( $imperial_style ); ?>">
+                        <input type="text" class=" form-control" name="rt-bmi-pound" placeholder="<?php esc_attr_e( 'Weight / lbs', 'gymat-core' ); ?>">
                     </div>
-                    
-                    <div class="input-form rt-bmi-fields-imperial" <?php echo $imperial_style; ?>>
-                        <input type="text" class=" form-control" name="rt-bmi-feet" placeholder="<?php _e( 'Height / feet', 'gymat-core' ); ?>">
+
+                    <div class="input-form rt-bmi-fields-imperial" style="<?php echo esc_attr( $imperial_style ); ?>">
+                        <input type="text" class=" form-control" name="rt-bmi-feet" placeholder="<?php esc_attr_e( 'Height / feet', 'gymat-core' ); ?>">
                     </div>
-                    <div class="input-form rt-bmi-fields-imperial inch" <?php echo $imperial_style; ?>>
-                        <input type="text" class=" form-control" name="rt-bmi-inch" placeholder="<?php _e( 'Height / inch', 'gymat-core' ); ?>">
+                    <div class="input-form rt-bmi-fields-imperial inch" style="<?php echo esc_attr( $imperial_style ); ?>">
+                        <input type="text" class=" form-control" name="rt-bmi-inch" placeholder="<?php esc_attr_e( 'Height / inch', 'gymat-core' ); ?>">
                     </div>
                     <div class="input-form  submit">
                         <input type="submit" class= "rt-bmi-submit" value="<?php echo esc_html( $data['btn_text'] ); ?>">
                     </div>
                 </div>
-                <div class="rt-bmi-result" style="display:none;" data-chart="<?php echo esc_attr( $bmi_chart_encoded ); ?>"><?php _e( 'Your BMI is:', 'gymat-core' );?> <span class="rt-bmi-val"></span><?php _e( ', and weight status is:', 'gymat-core' );?> <span class="rt-bmi-status"></span></div>
-                <div class="rt-bmi-error" data-emptymsg="<?php _e( 'Error: One or more fields are empty', 'gymat-core' );?>" data-numbermsg="<?php _e( 'Error: All field values must be a number', 'gymat-core' );?>"></div>
+                <div class="rt-bmi-result" style="display:none;" data-chart="<?php echo esc_attr( $bmi_chart_encoded ); ?>"><?php esc_html_e( 'Your BMI is:', 'gymat-core' );?> <span class="rt-bmi-val"></span><?php esc_html_e( ', and weight status is:', 'gymat-core' );?> <span class="rt-bmi-status"></span></div>
+                <div class="rt-bmi-error" data-emptymsg="<?php esc_attr_e( 'Error: One or more fields are empty', 'gymat-core' );?>" data-numbermsg="<?php esc_attr_e( 'Error: All field values must be a number', 'gymat-core' );?>"></div>
             </form>
         </div>
     </div>
