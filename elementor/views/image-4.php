@@ -39,9 +39,9 @@ else {
 			<?php echo wp_kses_post($getimg);?>
 			<div class="image-shape-element">
 				<ul class="d-none d-xl-block">
-					<li><img width="344" height="236" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-96.png'; ?>" alt="shape"></li>
+					<li><img width="344" height="236" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-96.png' ); ?>" alt="shape"></li>
 					<li class="motion-effects1">
-						<img width="155" height="150" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-97.png'; ?>" alt="shape" >
+						<img width="155" height="150" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-97.png' ); ?>" alt="shape" >
 					</li>
 				</ul>
 			</div>

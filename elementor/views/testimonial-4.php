@@ -102,7 +102,7 @@ $getimg = Group_Control_Image_Size::get_attachment_image_html( $data, 'icon_imag
                                                 <div class="testimonial-item wow fadeInRight rt-animate" data-wow-delay="600ms" data-wow-duration="1200ms">
                                                     <div class="testimonial-content-wrapper">
                                                         <div class="testimonial-qoute">
-                                                            <img width="71" height="56" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-92.png'; ?>" alt="shape">
+                                                            <img width="71" height="56" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-92.png' ); ?>" alt="shape">
                                                         </div>
                                                         <?php echo wp_kses_post( $content ); ?>
                                                         <div class="testimonial-content">
@@ -130,7 +130,7 @@ $getimg = Group_Control_Image_Size::get_attachment_image_html( $data, 'icon_imag
                                                         </div>
                                                     </div>
                                                     <div class="testimonial-shape">
-                                                        <img width="231" height="182" src="<?php echo GYMAT_ASSETS_URL . 'element/cycle.svg'; ?>" alt="shape">
+                                                        <img width="231" height="182" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/cycle.svg' ); ?>" alt="shape">
                                                     </div>
                                                 </div>
                                             </div>

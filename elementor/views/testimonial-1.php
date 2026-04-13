@@ -116,7 +116,7 @@ $swiper_data = json_encode( $swiper_data );
 									</div>
 								</div>
 								<div class="testimonial-qoute">
-									<img width="206" height="173" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-55.png'; ?>" alt="shape">
+									<img width="206" height="173" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-55.png' ); ?>" alt="shape">
 								</div>
 							</div>
 						</div>

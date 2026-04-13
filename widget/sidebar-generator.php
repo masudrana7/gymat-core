@@ -201,7 +201,7 @@ if ( !class_exists( 'GymatTheme_Sidebar_Generator' ) ) {
 								dataType: 'json',
 								data: {
 									id: $(this).closest('.widgets-sortables').attr('id'),
-									_wpnonce: '<?php echo wp_create_nonce( 'gymat_remove_sidebar' ); ?>',
+									_wpnonce: '<?php echo esc_js( wp_create_nonce( 'gymat_remove_sidebar' ) ); ?>',
 								},
 								complete: function(response) {
 									if ( ! response || ! response.responseJSON || ! response.responseJSON.success) {

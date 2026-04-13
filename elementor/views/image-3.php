@@ -45,12 +45,12 @@ else {
 					   <path d="M278 -1.21518e-05L278 576C124.204 576 -5.64329e-06 446.897 -1.25889e-05 288C-1.95345e-05 129.103 124.204 -5.42913e-06 278 -1.21518e-05Z" fill="#FF0336"/>
 					</svg>
 			    </li>
-				<li class="motion-effects1"><img width="84" height="76" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-102.png'; ?>" alt="shape"></li>
+				<li class="motion-effects1"><img width="84" height="76" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-102.png' ); ?>" alt="shape"></li>
 				<li>
-					<img  width="81" height="576" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-86.png'; ?>" alt="shape" >
+					<img  width="81" height="576" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-86.png' ); ?>" alt="shape" >
 				</li>
 				<li class="motion-effects3">
-					<img width="95" height="53" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-104.png'; ?>" alt="shape" >
+					<img width="95" height="53" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-104.png' ); ?>" alt="shape" >
 				</li>
 			</ul>
 		</div>

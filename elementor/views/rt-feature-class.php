@@ -65,7 +65,7 @@ $temp = GymatTheme_Helper::wp_set_temp_query( $query );
                             if ( !empty( GymatTheme::$options['no_preview_image']['id'] ) ) {
                                 echo wp_get_attachment_image( GymatTheme::$options['no_preview_image']['id'], $thumb_size );
                             } else {
-                                echo '<img class="wp-post-image" src="' . GymatTheme_Helper::get_img( 'noimage_370X328.jpg' ) . '" alt="'.get_the_title().'">';
+                                echo '<img class="wp-post-image" src="' . esc_url( GymatTheme_Helper::get_img( 'noimage_370X328.jpg' ) ) . '" alt="' . esc_attr( get_the_title() ) . '">';
                             }
                         }
                     ?>

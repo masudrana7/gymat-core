@@ -103,7 +103,7 @@ uksort( $schedule, array( $this, 'sort_by_time_as_key' ) );
         </tr>
         <?php foreach ( $schedule as $schedule_time => $schedule_value ): ?>
             <tr>
-                <th class="rt-row-title"><?php echo $schedule_time;?></th>
+                <th class="rt-row-title"><?php echo esc_html( $schedule_time );?></th>
                 <?php
                 // each week slot(cell)
                 foreach ( $weeknames as $weekname => $weekvalue ) {

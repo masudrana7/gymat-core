@@ -39,12 +39,12 @@ extract($data);
 						<div class="list-content">
 							<span>
 								<?php if (!empty( $href_value ) ) { ?>
-									<a <?php echo $this->get_render_attribute_string( $link_key ); ?>>
-										<?php echo $address['address_infos']; ?>
+									<a <?php $this->print_render_attribute_string( $link_key ); ?>>
+										<?php echo wp_kses_post( $address["address_infos"] ); ?>
 									</a>
 								
 								<?php } else { ?>
-									<?php echo $address['address_infos']; ?>
+									<?php echo wp_kses_post( $address["address_infos"] ); ?>
 								<?php } ?>
 							</span>
 						</div>

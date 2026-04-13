@@ -51,7 +51,7 @@ $thumb_size='gymat-size5';
                                             echo wp_kses_post(wp_get_attachment_image( $thumbnail_img_id,$thumb_size));
                                         }
                                         else{
-                                            echo '<img class="wp-post-image" src="' . GymatTheme_Helper::get_img( 'noimage_370X328.jpg' ) . '" alt="'. the_title_attribute( array( 'echo'=> false ) ) .'">';
+                                            echo '<img class="wp-post-image" src="' . esc_url( GymatTheme_Helper::get_img( 'noimage_370X328.jpg' ) ) . '" alt="'. the_title_attribute( array( 'echo'=> false ) ) .'">';
                                         } ?>
                                     </div>
                                 </div>

@@ -25,10 +25,10 @@ if ( !empty( $data['buttontext'] ) ) {
 <div class="cta-default cta-<?php echo esc_attr( $data['style'] ); ?>">
 	<ul class="shape-element">
 		<?php if($data['shape1_display']){ ?>
-			<li><img width="242" height="144" src="<?php echo GYMAT_ASSETS_URL . 'element/material-1.png'; ?>" alt="blog"></li>
+			<li><img width="242" height="144" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/material-1.png' ); ?>" alt="blog"></li>
 		<?php } ?>
 		<?php if($data['shape2_display']){ ?>
-			<li class="black-shape"><img width="339" height="186" src="<?php echo GYMAT_ASSETS_URL . 'element/Shape.png'; ?>" alt="black-shape"></li>
+			<li class="black-shape"><img width="339" height="186" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/Shape.png' ); ?>" alt="black-shape"></li>
 		<?php } ?>
 	</ul>
 	<div class="action-box">

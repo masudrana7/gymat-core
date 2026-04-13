@@ -54,10 +54,10 @@ $thumb_size='gymat-size6';
                     </div>
                     <div class="swiper-button">
                         <div class="swiper-button-arrow  swiper-button-prev">
-                           <img width="21" height="12" src="<?php echo GYMAT_ASSETS_URL . 'img/arrow-left.svg'; ?>" alt="arrow-left" >
+                           <img width="21" height="12" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'img/arrow-left.svg' ); ?>" alt="arrow-left" >
                         </div>
                         <div class="swiper-button-arrow  active swiper-button-next">
-                            <img width="21" height="12" src="<?php echo GYMAT_ASSETS_URL . 'img/arrow-right.svg'; ?>" alt="arrow-right" >
+                            <img width="21" height="12" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'img/arrow-right.svg' ); ?>" alt="arrow-right" >
                         </div>
                     </div>
 				</div>
@@ -76,7 +76,7 @@ $thumb_size='gymat-size6';
                                                     echo wp_kses_post(wp_get_attachment_image( $thumbnail_img_id,$thumb_size));
                                                 }
                                                 else{
-                                                    echo '<img class="wp-post-image" src="' . GymatTheme_Helper::get_img( 'noimage_370X328.jpg' ) . '" alt="'. the_title_attribute( array( 'echo'=> false ) ) .'">';
+                                                    echo '<img class="wp-post-image" src="' . esc_url( GymatTheme_Helper::get_img( 'noimage_370X328.jpg' ) ) . '" alt="'. the_title_attribute( array( 'echo'=> false ) ) .'">';
                                                 } ?>
                                                 <?php
                                                     $start_time        = $class_data['start_time'];

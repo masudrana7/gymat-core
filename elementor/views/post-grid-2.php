@@ -68,12 +68,12 @@ $col_class = "col-xl-{$data['col_xl']} col-lg-{$data['col_lg']} col-md-{$data['c
 							</a>
 						<?php } else {
 										
-							echo '<img class="wp-post-image" src="' . GymatTheme_Helper::get_img( 'noimage_560X570.jpg' ) . '" alt="'.get_the_title().'">';
+							echo '<img class="wp-post-image" src="' . esc_url( GymatTheme_Helper::get_img( 'noimage_560X570.jpg' ) ) . '" alt="' . esc_attr( get_the_title() ) . '">';
 										
 						} ?>
 						<div class="entry-content">
 							<?php  if ( $data['post_grid_category'] == 'yes' ) { ?>
-								<div class="blog-cat"><?php echo the_category( ' ' );?></div>
+								<div class="blog-cat"><?php echo wp_kses_post( get_the_category_list( ' ' ) );?></div>
 							<?php } ?>
 							<h3 class="entry-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $title );?></a></h3>
 							<?php if ( $gymat_has_entry_meta ) { ?>
@@ -85,11 +85,11 @@ $col_class = "col-xl-{$data['col_xl']} col-lg-{$data['col_lg']} col-md-{$data['c
 									<li><?php echo get_the_date(); ?></li>
 								<?php } ?>
 								<?php  if ( $data['post_grid_comment'] == 'yes' ) { ?>
-									<li class="post-comment"><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo wp_kses_post( $gymat_comments_html );?></a></li>
+									<li class="post-comment"><a href="<?php echo esc_url( get_comments_link( get_the_ID() ) ); ?>"><?php echo wp_kses_post( $gymat_comments_html );?></a></li>
 								<?php } if ( $data['post_grid_view'] == 'yes' && function_exists( 'gymat_views' ) ) { ?>
-									<li><span class="meta-views meta-item "><?php echo gymat_views(); ?></span></li>
+									<li><span class="meta-views meta-item "><?php echo esc_html( gymat_views() ); ?></span></li>
 								<?php } if ( $data['post_grid_read'] == 'yes' && function_exists( 'gymat_reading_time' ) ) { ?>
-									<li class="meta-reading-time"><?php echo gymat_reading_time(); ?></li>
+									<li class="meta-reading-time"><?php echo esc_html( gymat_reading_time() ); ?></li>
 								<?php } ?>
 							</ul>
 							<?php } ?>

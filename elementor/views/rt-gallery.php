@@ -78,7 +78,7 @@ $col_class = "col-lg-{$data['col_lg']} col-md-{$data['col_md']} col-sm-{$data['c
                                 if ( !empty( GymatTheme::$options['no_preview_image']['id'] ) ) {
                                     echo wp_get_attachment_image( GymatTheme::$options['no_preview_image']['id'], 'full' );
                                 } else {
-                                    echo '<img class="wp-post-image" src="' . GymatTheme_Helper::get_img( 'noimage_370X328.jpg' ) . '" alt="'.get_the_title().'">';
+                                    echo '<img class="wp-post-image" src="' . esc_url( GymatTheme_Helper::get_img( 'noimage_370X328.jpg' ) ) . '" alt="' . esc_attr( get_the_title() ) . '">';
                                 }
                             }
                             ?>
@@ -101,7 +101,7 @@ $col_class = "col-lg-{$data['col_lg']} col-md-{$data['col_md']} col-sm-{$data['c
                             </div>
                             <?php if ( $data['view_project_link_btn'] ) { ?>
                                 <div class="gallery-button">
-                                    <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="gallery-btn img-popup-icon" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="1" data-elementor-lightbox-title="<?php echo get_the_title(); ?>"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>" class="gallery-btn img-popup-icon" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="1" data-elementor-lightbox-title="<?php echo esc_attr( get_the_title() ); ?>"><i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             <?php } ?>
                         </div>

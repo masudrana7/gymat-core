@@ -99,7 +99,7 @@ uksort( $schedule, array( $this, 'sort_by_time_as_key' ) );
     <?php if ( $data['nav'] == 'yes' ): ?>
         <div class="rt-routine-nav">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#" data-id="all"><?php _e( 'All', 'gymat-core' );?></a></li>
+                <li class="active"><a href="#" data-id="all"><?php esc_html_e( 'All', 'gymat-core' );?></a></li>
                 <?php foreach ( $classes as $class ): ?>
                     <li><a data-id="<?php echo esc_attr( $class->ID );?>" href="#"><?php echo esc_html( $class->post_title );?></a></li>
                 <?php endforeach; ?>
@@ -115,7 +115,7 @@ uksort( $schedule, array( $this, 'sort_by_time_as_key' ) );
         </tr>
         <?php foreach ( $schedule as $schedule_time => $schedule_value ): ?>
             <tr>
-                <th class="rt-row-title"><?php echo $schedule_time;?></th>
+                <th class="rt-row-title"><?php echo esc_html( $schedule_time );?></th>
                 <?php
                 // each week slot(cell)
                 foreach ( $weeknames as $weekname => $weekvalue ) {

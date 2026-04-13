@@ -124,7 +124,7 @@ $getimg = Group_Control_Image_Size::get_attachment_image_html( $data, 'icon_imag
 														</div>
 														
 														<div class="testimonial-qoute">
-															<img width="96" height="83" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-36.png'; ?>" alt="shape">
+															<img width="96" height="83" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-36.png' ); ?>" alt="shape">
 														</div>
 													</div>
 												</div>

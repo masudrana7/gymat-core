@@ -105,7 +105,7 @@ $col_class = "col-lg-{$data['col_lg']} col-md-{$data['col_md']} col-sm-{$data['c
                                 echo wp_get_attachment_image( GymatTheme::$options['no_preview_image']['id'], $thumb_size );
                             }
                             else {
-                                echo '<img class="wp-post-image" src="' . GymatTheme_Helper::get_img( 'noimage_400X400.jpg' ) . '" alt="'.get_the_title().'">';
+                                echo '<img class="wp-post-image" src="' . esc_url( GymatTheme_Helper::get_img( 'noimage_400X400.jpg' ) ) . '" alt="' . esc_attr( get_the_title() ) . '">';
                             }
                         }
                         ?>

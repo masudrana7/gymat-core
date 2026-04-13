@@ -40,9 +40,9 @@ $js_tilt='js-tilt';
 		<div class="image-shape-element">
 			<ul class="d-none d-xl-block">
 				<li></li>
-				<li class="motion-effects1"><img width="114" height="47" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-84.png'; ?>" alt="shape"></li>
-				<li class="motion-effects1"><img width="96" height="100" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-85.png'; ?>" alt="shape" ></li>
-				<li><img width="81" height="565" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-86.png'; ?>" alt="shape"></li>
+				<li class="motion-effects1"><img width="114" height="47" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-84.png' ); ?>" alt="shape"></li>
+				<li class="motion-effects1"><img width="96" height="100" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-85.png' ); ?>" alt="shape" ></li>
+				<li><img width="81" height="565" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-86.png' ); ?>" alt="shape"></li>
 			</ul>
 		</div>
 	</div>

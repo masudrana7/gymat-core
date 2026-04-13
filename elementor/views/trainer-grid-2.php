@@ -86,7 +86,7 @@ $col_class = "col-lg-{$data['col_lg']} col-md-{$data['col_md']} col-sm-{$data['c
 									echo wp_get_attachment_image( GymatTheme::$options['no_preview_image']['id'], $thumb_size );
 								}
 								else {
-									echo '<img class="wp-post-image" src="' . GymatTheme_Helper::get_img( 'noimage_400X400.jpg' ) . '" alt="'.get_the_title().'">';
+									echo '<img class="wp-post-image" src="' . esc_url( GymatTheme_Helper::get_img( 'noimage_400X400.jpg' ) ) . '" alt="' . esc_attr( get_the_title() ) . '">';
 								}
 							}
 							?>
@@ -97,7 +97,7 @@ $col_class = "col-lg-{$data['col_lg']} col-md-{$data['col_md']} col-sm-{$data['c
 									<?php if($trainer_shape_image){ 
 										echo wp_kses_post( $trainer_shape_image );	
 									} else{?>
-										<img width="353" height="412" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-41.png'; ?>" alt="shape">
+										<img width="353" height="412" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-41.png' ); ?>" alt="shape">
 									<?php } ?>
 								</div>
 						<?php } ?>
@@ -105,7 +105,7 @@ $col_class = "col-lg-{$data['col_lg']} col-md-{$data['col_md']} col-sm-{$data['c
 					<div class="trainer-info">
 						<div class="trainer-content">
 							<div class="trainer-icon-shape">
-								<img width="112" height="28" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-40.png'; ?>" alt="shape">
+								<img width="112" height="28" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-40.png' ); ?>" alt="shape">
 								<a href="#" class="rt-icon"><i class="fas fa-angle-up"></i></a>
 							</div>
 							<h3 class="trainer-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>

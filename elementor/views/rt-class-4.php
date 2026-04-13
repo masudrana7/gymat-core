@@ -95,7 +95,7 @@ $col_class = "col-lg-{$data['col_lg']} col-md-{$data['col_md']} col-sm-{$data['c
                                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( $thumb_size, ['class' => 'img-fluid mb-10 width-100'] ); ?></a>
                                 <?php }
                                 else {
-                                        echo '<img class="wp-post-image" src="' .get_img( 'noimage_390X340.jpg' ) . '" alt="'.get_the_title().'">';
+                                        echo '<img class="wp-post-image" src="' . esc_url( get_img( 'noimage_390X340.jpg' ) ) . '" alt="' . esc_attr( get_the_title() ) . '"'>';
                                     }
                             ?>
                         </div>

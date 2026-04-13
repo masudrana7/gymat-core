@@ -37,10 +37,10 @@ else {
 		<div class="image-shape-element">
 			<ul class="d-none d-xl-block">
 				<li class="motion-effects1">
-					<img width="122" height="124" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-26.png'; ?>" alt="shape">
+					<img width="122" height="124" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-26.png' ); ?>" alt="shape">
 				</li>
 				<li class="motion-effects3">
-					<img width="346" height="184" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-27.png'; ?>" alt="shape">
+					<img width="346" height="184" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-27.png' ); ?>" alt="shape">
 				</li>
 			</ul>
 		</div>
