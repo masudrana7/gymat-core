@@ -66,7 +66,7 @@ $img=Group_Control_Image_Size::get_attachment_image_html( $data, 'icon_image_siz
                                 </g>
                                 </svg>
                             </div>
-                            <div class="item-element motion-effects1"><img src="<?php echo GYMAT_ASSETS_URL . 'element/banner-6-shape.svg'; ?>" alt="banner"></div>
+                            <div class="item-element motion-effects1"><img src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/banner-6-shape.svg' ); ?>" alt="banner"></div>
                         <?php } ?>
                     </div>			
                 </div>

@@ -29,7 +29,7 @@ $gymat_socials = GymatTheme_Helper::socials();
 <section class="rt-banner-addon <?php echo esc_attr( $data['style'] ); ?>">
         <?php if($data['shape_display']=='yes'){?>
             <div class="element-list d-none d-xl-block" >
-                <img  width="1920" height="414" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-32.png'; ?>" alt="">	
+                <img  width="1920" height="414" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-32.png' ); ?>" alt="">	
             </div>  
         <?php  } ?>
         <?php if ( $gymat_socials && $data['follow_display']=='yes' ) { ?>
@@ -38,7 +38,7 @@ $gymat_socials = GymatTheme_Helper::socials();
                     <div class="social-icon">
                         <?php $count=1; ?>
                     <?php foreach ( $gymat_socials as $gymat_social ): ?>
-                        <?php if($count==1):?><span class="line"><span class="text"><?php _e("Share","gymat-core"); ?></span></span> <?php endif ?><a target="_blank" href="<?php echo esc_url( $gymat_social['url'] );?>"><i class="fab <?php echo esc_attr( $gymat_social['icon'] );?>"></i></a>
+                        <?php if($count==1):?><span class="line"><span class="text"><?php esc_html_e("Share","gymat-core"); ?></span></span> <?php endif ?><a target="_blank" href="<?php echo esc_url( $gymat_social['url'] );?>"><i class="fab <?php echo esc_attr( $gymat_social['icon'] );?>"></i></a>
                     <?php $count++; endforeach; ?>
                     </div>
                 </li>

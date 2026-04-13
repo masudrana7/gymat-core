@@ -21,7 +21,7 @@ $img=Group_Control_Image_Size::get_attachment_image_html( $data, 'icon_image_siz
             <span class="banner-subtitle"><?php echo esc_html($data['sub_title']); ?></span>
             <h3 class="title"><?php echo esc_html($data['title']); ?></h3>
             <?php if($data['shape_display']=='yes'){?>
-                <div class="shape"><img src="<?php echo GYMAT_ASSETS_URL . 'img/banner-6-shape.svg'; ?>" alt="banner"></div>
+                <div class="shape"><img src="<?php echo esc_url( GYMAT_ASSETS_URL . 'img/banner-6-shape.svg' ); ?>" alt="banner"></div>
             <?php } ?>
         </div>
     </div>

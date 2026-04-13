@@ -33,13 +33,13 @@ $animate_img=wp_get_attachment_image_url($data['rt_image']['id'],'full');
     <?php if($data['shape_display']=='yes'){?>
         <ul class="element-list d-none d-xl-block">
             <li>
-                <img src="<?php echo GYMAT_ASSETS_URL . 'element/home4-shape3.svg'; ?>" alt="element_23" width="1211" height="850">
+                <img src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/home4-shape3.svg' ); ?>" alt="element_23" width="1211" height="850">
             </li>
             <li class="wow fadeInLeft rt-animate" data-wow-delay="1200ms" data-wow-duration="1200ms">
-                <img src="<?php echo GYMAT_ASSETS_URL . 'element/home-4-shape2.svg'; ?>" alt="element_23" width="196" height="98">
+                <img src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/home-4-shape2.svg' ); ?>" alt="element_23" width="196" height="98">
             </li>
             <li class="motion-effects1">
-                <img src="<?php echo GYMAT_ASSETS_URL . 'element/home4-shape.svg'; ?>" alt="element_23" width="102" height="32">
+                <img src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/home4-shape.svg' ); ?>" alt="element_23" width="102" height="32">
             </li>
         </ul>
     <?php } ?>    

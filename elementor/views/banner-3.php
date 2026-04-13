@@ -31,7 +31,7 @@ $getimg = Group_Control_Image_Size::get_attachment_image_html( $data, 'icon_imag
                                     <div class="item-clip-shape">
                                         <div class="clip-content">
                                             <div class="item-discount"><?php echo wp_kses_post($data['day_off']); ?></div>
-                                            <div class="item-off"><?php _e('off','gymat-core'); ?></div>
+                                            <div class="item-off"><?php esc_html_e('off','gymat-core'); ?></div>
                                             <div class="item-way-member"><?php echo wp_kses_post($data['sub_title']); ?></div>
                                         </div>
                                     </div>

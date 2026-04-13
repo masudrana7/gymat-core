@@ -51,7 +51,7 @@ $gymat_socials = GymatTheme_Helper::socials();
                     <div class="social-icon">
                         <?php $count=1; ?>
                     <?php foreach ( $gymat_socials as $gymat_social ): ?>
-                        <?php if($count==1):?><span class="line"><span class="text"><?php _e("Share","gymat-core"); ?></span></span> <?php endif ?><a target="_blank" href="<?php echo esc_url( $gymat_social['url'] );?>"><i class="fab <?php echo esc_attr( $gymat_social['icon'] );?>"></i></a>
+                        <?php if($count==1):?><span class="line"><span class="text"><?php esc_html_e("Share","gymat-core"); ?></span></span> <?php endif ?><a target="_blank" href="<?php echo esc_url( $gymat_social['url'] );?>"><i class="fab <?php echo esc_attr( $gymat_social['icon'] );?>"></i></a>
                     <?php $count++; endforeach; ?>
                     </div>
                 </li>

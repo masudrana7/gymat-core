@@ -28,10 +28,10 @@ $signature_image = wp_get_attachment_image( $data['signature_image']['id'], 'ful
 						<?php echo wp_kses_post($getimg);?>	
 					<?php } ?>
 					<div class="item-shape">
-						<img width="184" height="190" class="motion-effects1" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-68.png'; ?>" alt="shape">
+						<img width="184" height="190" class="motion-effects1" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-68.png' ); ?>" alt="shape">
 					</div>
 					<div class="item-content wow fadeInUp rt-animate" data-wow-delay="600ms" data-wow-duration="800ms">
-						<div class="item-icon"><img width="27" height="23" src="<?php echo GYMAT_ASSETS_URL . 'element/shape-70.png'; ?>" alt="shape"></div>
+						<div class="item-icon"><img width="27" height="23" src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-70.png' ); ?>" alt="shape"></div>
 						<h4 class="item-quote">
 							<?php echo wp_kses_post($data['blockqoute_text2']); ?>
 						</h4>
@@ -55,7 +55,7 @@ $signature_image = wp_get_attachment_image( $data['signature_image']['id'], 'ful
 						<?php if($signature_image){
 							echo wp_kses_post($signature_image);
 						} else { ?>
-							<img src="<?php echo GYMAT_ASSETS_URL . 'element/shape-69.png'; ?>" width="157" height="27" alt="">
+							<img src="<?php echo esc_url( GYMAT_ASSETS_URL . 'element/shape-69.png' ); ?>" width="157" height="27" alt="">
 						<?php } ?>
 					</div>
 					<div class="rt-designation">
