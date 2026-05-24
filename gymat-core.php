@@ -76,7 +76,7 @@ class Gymat_Core {
 	public function demo_importer() {
 		require_once 'demo-importer.php';
 	}
-    
+
 	public function post_meta(){
 		if ( !did_action( $this->action ) || ! defined( 'RT_FRAMEWORK_VERSION' ) ) {
 			return;
